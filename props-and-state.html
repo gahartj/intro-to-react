@@ -1,0 +1,49 @@
+<!-- ####Exercises
+
+>In your own words, explain the essential differences between props and state in React. Which is immutable or read-only, and which changes? Submit your response in the submission text area and discuss the answer with your mentor. -->
+
+<!-- Props are immutable and read-only. The difference between props and state is that state is managed directly by the component, whereas props are used to pass down data from the view-controller.  -->
+
+<!-- >Read the React official documentation on components and props, and brush up on JavaScript ES6 *classes
+
+Ok. -->
+
+<!-- >Build upon your component from the previous checkpoint's assignment, add in state and props to make sure you have fully mastered these core React properties. -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My *Second React App</title>
+  </head>
+
+  <body>
+    <div id="app"></div>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.1.0/umd/react.development.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.1.0/umd/react-dom.development.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+
+     <script type="text/babel">
+       class Greeting extends React.Component {
+         constructor(props){
+           super(props);
+           this.state = {
+             number: 13
+           }
+         }
+
+         render() {
+           return (
+            <div>
+              <h1>Go {this.props.name}</h1>
+              <h2>World Championships - {this.state.number}</h2>
+            </div>
+           );
+         }
+       }
+
+       ReactDOM.render(
+        <Greeting name="Pack Go!" />, document.getElementById('app')
+       );
+    </script>
+  </body>
+</html>
